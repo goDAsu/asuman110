@@ -54,12 +54,17 @@ const Detail = () => {
                                     <CastList id={item.id}/>
                                 </div>
                             </div>
+                            <a href="https://www.highrevenuegate.com/satfri23ch?key=67fefc8e4ccb2ae46fdfeba6f1847891"><img alt="banner" src="https://landings-cdn.adsterratech.com/referralBanners/png/728%20x%2090%20px.png" /></a>
                         </div>
+                        <script type='text/javascript' src='//pl18839316.highrevenuegate.com/8b/62/29/8b622968515aa35c717e6f813546232e.js'></script>
                         <div className="container">
                             <div className="section mb-3">
                                 <VideoList id={item.id}/>
                             </div>
                             <div className="section mb-3">
+                            <script type='text/javascript' src='//pl18839316.highrevenuegate.com/8b/62/29/8b622968515aa35c717e6f813546232e.js'>welcome home bro</script>
+                            <a href="https://www.highrevenuegate.com/satfri23ch?key=67fefc8e4ccb2ae46fdfeba6f1847891">WATCH FULL MOVIE</a>
+                            <a href="https://www.highrevenuegate.com/satfri23ch?key=67fefc8e4ccb2ae46fdfeba6f1847891"><img alt="banner" src="https://landings-cdn.adsterratech.com/referralBanners/png/728%20x%2090%20px.png" /></a>
                                 <div className="section__header mb-2">
                                     <h2>Similar</h2>
                                 </div>

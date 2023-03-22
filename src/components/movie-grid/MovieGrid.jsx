@@ -68,6 +68,13 @@ const MovieGrid = props => {
 
     return (
         <>
+        <header>
+        <script
+      async
+      src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2220397932843171"
+      crossorigin="anonymous"
+    ></script>
+        </header>
             <div className="section mb-3">
                 <MovieSearch category={props.category} keyword={keyword}/>
             </div>
