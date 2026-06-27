@@ -1,0 +1,112 @@
+@use "../scss/" as *;
+
+.live-page {
+  padding: 9rem 0 4rem;
+
+  &__hero {
+    display: grid;
+    grid-template-columns: 1.3fr 0.7fr;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+
+    @include tablet {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &__hero__content,
+  &__hero__card,
+  &__player-card {
+    background: rgba(255, 255, 255, 0.06);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(12px);
+    border-radius: $border-radius;
+    box-shadow: $box-shadow;
+  }
+
+  &__hero__content {
+    padding: 2rem;
+  }
+
+  &__hero__card {
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1rem;
+
+    svg {
+      font-size: 2.4rem;
+      color: $main-color;
+    }
+  }
+
+  &__eyebrow {
+    color: $main-color;
+    font-size: 0.85rem;
+    font-weight: 700;
+    letter-spacing: 0.24em;
+    text-transform: uppercase;
+    margin-bottom: 0.75rem;
+  }
+
+  h1 {
+    font-size: 2.6rem;
+    margin-bottom: 1rem;
+  }
+
+  p {
+    color: rgba(255, 255, 255, 0.78);
+  }
+
+  &__actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-top: 1.5rem;
+  }
+
+  &__pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.7rem 1.2rem;
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.08);
+    font-weight: 600;
+  }
+
+  &__player-card {
+    padding: 1.5rem;
+  }
+
+  &__player-card__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+
+    h2 {
+      font-size: 1.4rem;
+    }
+
+    span {
+      color: rgba(255, 255, 255, 0.72);
+      font-size: 0.95rem;
+    }
+  }
+
+  &__player-frame {
+    position: relative;
+    overflow: hidden;
+    border-radius: 20px;
+    min-height: 420px;
+    background: #000;
+
+    iframe {
+      width: 100%;
+      height: 500px;
+      border: 0;
+    }
+  }
+}

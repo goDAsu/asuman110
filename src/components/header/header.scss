@@ -1,18 +1,22 @@
 @use "../../scss/" as *;
 
 .logo {
-  font-size: 2.5rem;
-  font-weight: 600;
+  font-size: 2rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
 
   @include flex(center, unset);
 
   img {
-    margin-right: 10px;
-    width: 50px;
+    margin-right: 0.75rem;
+    width: 42px;
+    border-radius: 50%;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
 
     @include mobile {
-      width: 30px;
-      margin-right: 0;
+      width: 32px;
+      margin-right: 0.4rem;
     }
   }
 }
@@ -24,11 +28,14 @@
   left: 0;
   width: 100%;
   z-index: 99;
+  background: linear-gradient(180deg, rgba(5, 5, 5, 0.9), rgba(5, 5, 5, 0.4));
+  backdrop-filter: blur(16px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
   transition: height 0.3s ease, background-color 0.3s ease;
 
   &.shrink {
     height: $header-shrink-height;
-    background-color: $body-bg;
+    background-color: rgba(6, 6, 6, 0.95);
   }
 
   &__wrap {
@@ -37,7 +44,8 @@
     padding: 0 2rem;
 
     @include mobile {
-      justify-content: center;
+      justify-content: space-between;
+      padding: 0 1.2rem;
     }
   }
 
@@ -45,32 +53,38 @@
     @include flex(center, unset);
 
     & > * ~ * {
-      margin-left: 2rem;
+      margin-left: 1.2rem;
     }
 
     li {
-      padding: 5px 0;
-      font-weight: 700;
+      padding: 0.35rem 0;
+      font-weight: 600;
       position: relative;
-      font-size: 1.5rem;
+      font-size: 1rem;
 
-      &::after {
-        content: "";
-        position: absolute;
-        bottom: 0;
-        left: 50%;
-        transform: translateX(-50%);
-        width: 0;
-        transition: width 0.5s ease;
-        height: 2px;
-        background-color: $main-color;
+      .link {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.45rem;
+        padding: 0.55rem 0.8rem;
+        border-radius: 999px;
+        transition: background-color 0.2s ease, color 0.2s ease, transform 0.2s ease;
       }
 
-      &.active::after,
-      &:hover::after {
-        width: 10%;
-        height: 15%;
-        border-radius: 100%;
+      .nav-icon {
+        display: none;
+        font-size: 1.15rem;
+      }
+
+      .nav-label {
+        display: inline-block;
+      }
+
+      &.active .link,
+      .link:hover {
+        background: rgba(255, 255, 255, 0.08);
+        color: $main-color;
+        transform: translateY(-1px);
       }
     }
 
@@ -80,56 +94,46 @@
       left: 0;
       height: 5rem;
       width: 100%;
-      background-color: $body-bg;
-      padding: 0 2rem;
-      box-shadow: $box-shadow;
+      background: rgba(6, 6, 6, 0.95);
+      padding: 0 1.2rem;
+      box-shadow: 0 -8px 25px rgba(0, 0, 0, 0.25);
 
       @include flex(center, space-between);
 
       & > * ~ * {
         margin-left: 0;
       }
+
+      li .nav-label {
+        display: none;
+      }
+
+      li .nav-icon {
+        display: inline-flex;
+      }
     }
   }
-}
 
-.asu {
-  width: 3%;
-  height: 5%;
-}
+  &__actions {
+    @include flex(center, unset);
+    gap: 0.75rem;
+  }
 
-.con {
-  margin-left: 90%;
-  width: 100%;
-  display: flex;
-  // overflow: hidden;
-}
-.red-dot {
-  // position: absolute;
-  margin-top: 0.8%;
-  margin-left: 0.3%;
-  width: 5%;
-  height: 20%;
-  overflow: hidden;
-  display: flex;
-}
-.form {
-  width: 30%;
-  height: 30%;
-  background-color: aqua;
-  right: 10%;
-  position: absolute;
-}
+  &__pill {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.45rem 0.8rem;
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.08);
+    color: $txt-color;
+    font-size: 0.95rem;
+    font-weight: 600;
+    border: 1px solid rgba(255, 255, 255, 0.08);
 
-.for {
-  position: absolute;
-  right: 10%;
-  top: 10%;
-  color: blue;
-  font-size: 100px;
-}
-.ou {
-  border-radius: 100%;
-  width: 40%;
-  height: 10%;
+    &--accent {
+      background: linear-gradient(135deg, $main-color, #ff7a59);
+      color: $white;
+      border-color: transparent;
+    }
+  }
 }
